@@ -15,6 +15,7 @@ const httpStatus = require("http-status-code"),
   };
 
   exports.handle = (req, res) => {
+    console.log("second");
     try {
       if (routes[req.method][req.url]) {
         routes[req.method][req.url](req, res);
@@ -28,6 +29,7 @@ const httpStatus = require("http-status-code"),
   };
 
   exports.get = (url, action) => {
+    console.log("first");
     routes["GET"][url] = action;
   };
 
