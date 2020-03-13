@@ -5,7 +5,7 @@ exports.getAllSubscribers = (req, res) => {
     .exec()
     .then((subscribers) => {
       res.render("subscriber", {
-        subscriber: subscribers 
+        subscriber: subscribers
       });
     })
     .catch((error) => {
@@ -18,7 +18,7 @@ exports.getAllSubscribers = (req, res) => {
 };
 
 exports.getSubscriptionPage = (req, res) => {
-  res.render("subscribe");
+  res.render("contact");
 };
 
 exports.saveSubscriber = (req, res) => {
